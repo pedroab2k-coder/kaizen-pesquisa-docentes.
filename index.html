@@ -2,175 +2,23 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#F5F8F7">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#EEF4FF">
 <title>Pesquisa • Docentes e Gestor Educacional | Kaizen</title>
-<meta name="description" content="Uma pesquisa rápida da Kaizen para compreender desafios, oportunidades e recursos que podem gerar mais valor ao trabalho docente.">
-<meta property="og:title" content="Pesquisa • Docentes e Gestor Educacional | Kaizen">
-<meta property="og:description" content="6 perguntas rápidas para compreender desafios e oportunidades no trabalho docente diante das transformações da educação.">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Pesquisa • Docentes e Gestor Educacional | Kaizen">
-<meta name="twitter:description" content="6 perguntas rápidas sobre desafios e oportunidades no trabalho docente.">
+<meta name="description" content="6 perguntas rápidas para compreender desafios e oportunidades no trabalho docente.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x2='1' y2='1'%3E%3Cstop stop-color='%237b61ff'/%3E%3Cstop offset='1' stop-color='%23513de0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M14 19c7 0 13 3 18 8 5-5 11-8 18-8v26c-7 0-13 3-18 8-5-5-11-8-18-8V19Z' fill='none' stroke='white' stroke-width='5'/%3E%3Cpath d='m23 31 6 6 12-12' fill='none' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
-*{box-sizing:border-box}
-:root{
-  --page:#EEF4FF;
-  --surface:#FFFFFF;
-  --ink:#0B1F3A;
-  --text:#253B5B;
-  --muted:#6F7F98;
-  --primary:#1F5FB8;
-  --primary-soft:#E6EEFB;
-  --accent:#6550F2;
-  --border:#D6E1F2;
-  --danger:#A84C4C;
-  --shadow:0 18px 50px rgba(31,95,184,.10);
-}
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{
-  margin:0; min-height:100dvh;
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:linear-gradient(135deg,#E7F0FF 0%,#F4F7FC 62%,#EEF2F8 100%);
-  color:var(--text);
-}
-.page{
-  min-height:100dvh; display:flex; flex-direction:column;
-  padding:max(18px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));
-}
-.wrap{width:min(680px,100%);margin:auto}
-.brand{
-  display:flex;align-items:center;gap:10px;margin:0 0 18px 4px;
-  color:var(--ink);font-size:13px;font-weight:700;letter-spacing:.01em
-}
-.logo{
-  width:34px;height:34px;border-radius:11px;display:grid;place-items:center;
-  background:linear-gradient(135deg,#1F5FB8,#6550F2);color:#fff;font-weight:800;font-size:15px;
-  box-shadow:0 6px 16px rgba(31,95,184,.18)
-}
-.card{
-  background:var(--surface);border:1px solid var(--border);border-radius:22px;
-  box-shadow:var(--shadow);padding:clamp(24px,5vw,42px)
-}
-.kicker{
-  color:var(--primary);font-size:11px;font-weight:800;letter-spacing:.13em;
-  text-transform:uppercase;margin-bottom:13px
-}
-h1,h2{margin:0;color:var(--ink);letter-spacing:-.025em}
-h1{font-size:clamp(29px,5vw,42px);line-height:1.08;max-width:590px}
-h2{font-size:clamp(24px,4vw,33px);line-height:1.2;max-width:590px}
-p{font-size:15px;line-height:1.65;color:var(--muted);margin:16px 0 0}
-.intro{max-width:570px}
-.progress{margin-bottom:30px}
-.meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:9px}
-.track{height:5px;border-radius:99px;background:#E9EFF8;overflow:hidden}
-.fill{height:100%;background:var(--primary);border-radius:inherit;transition:width .3s ease}
-.name-field{
-  width:100%;margin-top:22px;padding:14px 16px;border:1px solid var(--border);
-  border-radius:15px;background:#FBFCFC;color:var(--text);font:inherit;font-size:16px;outline:none
-}
-.name-field:focus{border-color:#2B6ED0;box-shadow:0 0 0 3px var(--primary-soft);background:#fff}
-.name-field::placeholder{color:#98AAA6}
-.center-action{justify-content:center}
-.center-action .primary{margin-left:0;min-width:160px}
-textarea{
-  width:100%;min-height:140px;margin-top:24px;padding:16px 17px;
-  border:1px solid var(--border);border-radius:15px;background:#FBFCFC;
-  color:var(--text);font:inherit;font-size:15px;line-height:1.5;resize:vertical;outline:none
-}
-textarea:focus{border-color:#2B6ED0;box-shadow:0 0 0 3px var(--primary-soft);background:#fff}
-textarea::placeholder{color:#98AAA6}
-.actions{display:flex;gap:10px;margin-top:20px}
-button{
-  min-height:48px;border:0;border-radius:13px;padding:12px 18px;
-  font:inherit;font-size:14px;font-weight:750;cursor:pointer;transition:.18s ease
-}
-button:active{transform:scale(.985)}
-.primary{margin-left:auto;background:linear-gradient(90deg,#5946E8,#6A55F5);color:#fff;box-shadow:0 8px 20px rgba(101,80,242,.20)}
-.secondary{background:var(--primary-soft);color:var(--primary)}
-.error{min-height:18px;margin-top:7px;font-size:12px;color:var(--danger)}
-.status{min-height:18px;text-align:center;margin-top:10px;font-size:12px;color:var(--muted)}
-.hidden{display:none!important}
-.check{
-  width:54px;height:54px;border-radius:50%;display:grid;place-items:center;
-  background:var(--primary-soft);color:var(--primary);font-size:24px;font-weight:800;margin-bottom:20px
-}
-.note{text-align:center;color:#8290A5;font-size:11px;margin-top:13px}
-@media(max-width:520px){
-  .page{padding-left:14px;padding-right:14px}
-  .wrap{margin:0 auto auto}
-  .brand{margin:2px 2px 14px;font-size:12px}
-  .logo{width:31px;height:31px;border-radius:9px}
-  .card{border-radius:18px;padding:24px 19px;box-shadow:0 12px 34px rgba(31,95,184,.08)}
-  h1{font-size:28px;line-height:1.12;letter-spacing:-.02em}
-  h2{font-size:22px;line-height:1.27;letter-spacing:-.015em}
-  p{font-size:14px;line-height:1.55}
-  .kicker{font-size:10px;margin-bottom:11px}
-  .progress{margin-bottom:24px}
-  .name-field{
-  width:100%;margin-top:22px;padding:14px 16px;border:1px solid var(--border);
-  border-radius:15px;background:#FBFCFC;color:var(--text);font:inherit;font-size:16px;outline:none
-}
-.name-field:focus{border-color:#2B6ED0;box-shadow:0 0 0 3px var(--primary-soft);background:#fff}
-.name-field::placeholder{color:#98AAA6}
-.center-action{justify-content:center}
-.center-action .primary{margin-left:0;min-width:160px}
-textarea{min-height:128px;margin-top:20px;font-size:16px} /* evita zoom automático no iPhone */
-  .actions{margin-top:16px}
-  button{font-size:13px;min-height:46px;padding:11px 14px}
-  .note{font-size:10px}
-}
-@media(max-width:360px){
-  h1{font-size:25px}
-  h2{font-size:20px}
-  .card{padding:21px 16px}
-  .actions{flex-direction:column-reverse}
-  .actions button{width:100%;margin-left:0}
-}
-</style>
-</head>
-<body>
-<div class="page">
-<main class="wrap">
-  <div class="brand"><div class="logo">K</div><span>Kaizen Laboratórios Educacionais</span></div>
-
-  <section id="intro" class="card">
-    <div class="kicker">Pesquisa • Docentes e Gestor Educacional</div>
-    <h1>A educação está mudando. Queremos ouvir quem ensina.</h1>
-    <p class="intro">São 6 perguntas rápidas sobre os desafios e as oportunidades do trabalho docente. Queremos conhecer sua percepção — sem respostas certas ou erradas.</p>
-    <input id="firstName" class="name-field" type="text" maxlength="40" autocomplete="given-name" placeholder="Seu primeiro nome">
-    <div id="nameError" class="error"></div>
-    <div class="actions center-action"><button class="primary" onclick="start()">Começar →</button></div>
-  </section>
-
-  <section id="survey" class="card hidden">
-    <div class="progress">
-      <div class="meta"><span id="count"></span><span id="pct"></span></div>
-      <div class="track"><div id="fill" class="fill"></div></div>
-    </div>
-    <div class="kicker">Sua experiência importa</div>
-    <h2 id="question"></h2>
-    <textarea id="answer" maxlength="1200" placeholder="Escreva sua resposta..."></textarea>
-    <div id="error" class="error"></div>
-    <div class="actions center-action">
-      <button id="next" class="primary" onclick="next()">Continuar →</button>
-    </div>
-    <div class="actions" style="margin-top:8px;justify-content:center">
-      <button id="back" class="secondary" onclick="previous()">← Voltar</button>
-    </div>
-    <div id="submitStatus" class="status"></div>
-  </section>
-
-  <section id="finish" class="card hidden">
-    <div class="check">✓</div>
-    <div class="kicker">Pesquisa concluída</div>
-    <h2>Obrigado por compartilhar sua experiência.</h2>
-    <p>Suas respostas ajudam a compreender o que realmente pode gerar mais valor para o trabalho de professores independentes diante das transformações da educação.</p>
-  </section>
-
-  <div class="note">Pesquisa Kaizen • respostas utilizadas exclusivamente para análise de necessidades e desenvolvimento de soluções educacionais.</div>
-</main>
-</div>
+*{box-sizing:border-box}:root{--ink:#0b1f3a;--text:#2c4160;--muted:#70819a;--blue:#1f5fb8;--purple:#6550f2;--line:#d9e4f2;--soft:#e8effb;--danger:#a84c4c}html{-webkit-text-size-adjust:100%}body{margin:0;min-height:100dvh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:linear-gradient(135deg,#eaf3ff 0%,#fbfdff 56%,#f2efff 100%);-webkit-font-smoothing:antialiased}.page{min-height:100dvh;display:grid;place-items:center;padding:max(22px,env(safe-area-inset-top)) 18px max(22px,env(safe-area-inset-bottom));position:relative;overflow:hidden}.page:before,.page:after{content:"";position:fixed;border-radius:50%;pointer-events:none}.page:before{width:520px;height:520px;left:-300px;top:-260px;border:1px solid #1f5fb81a;box-shadow:70px 70px 0 #1f5fb807,140px 140px 0 #6550f205}.page:after{width:430px;height:430px;right:-270px;bottom:-250px;border:1px solid #6550f218}.wrap{width:min(720px,100%);position:relative;z-index:1}.brand{display:flex;justify-content:center;align-items:center;gap:11px;margin:0 0 18px;color:var(--ink);font-weight:850}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#7b61ff,#513de0);display:grid;place-items:center;box-shadow:0 9px 24px #6550f244}.logo svg{width:27px}.brand-text{line-height:1}.brand-text small{display:block;font-size:8px;letter-spacing:.15em;color:#647791;margin-top:5px}.card{background:#fffffff5;border:1px solid var(--line);border-radius:26px;box-shadow:0 25px 70px rgba(34,75,132,.13);padding:clamp(26px,5vw,46px);backdrop-filter:blur(12px)}.kicker{display:inline-flex;align-items:center;gap:7px;color:var(--blue);font-size:10px;font-weight:850;letter-spacing:.13em;text-transform:uppercase;margin-bottom:15px}.kicker:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--purple)}h1,h2{margin:0;color:var(--ink);letter-spacing:-.035em}h1{font-size:clamp(31px,5.5vw,46px);line-height:1.06}h2{font-size:clamp(25px,4vw,35px);line-height:1.18}p{font-size:15px;line-height:1.65;color:var(--muted);margin:16px 0 0}.intro{max-width:600px}.progress{margin-bottom:30px}.meta{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);font-weight:750;margin-bottom:9px}.track{height:6px;border-radius:99px;background:#e8eef7;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--purple));border-radius:inherit;transition:width .3s ease}.name-field,textarea{width:100%;border:1px solid var(--line);border-radius:15px;background:#fbfcff;color:var(--text);font:inherit;outline:none;transition:.18s}.name-field{margin-top:24px;padding:15px 17px;font-size:16px}.name-field:focus,textarea:focus{border-color:#6a55f5;box-shadow:0 0 0 4px #6550f214;background:#fff}.name-field::placeholder,textarea::placeholder{color:#98a6b9}textarea{min-height:145px;margin-top:24px;padding:17px;font-size:16px;line-height:1.55;resize:vertical}.actions{display:flex;justify-content:center;gap:10px;margin-top:20px}button{min-height:49px;border:0;border-radius:13px;padding:12px 22px;font:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:.18s}button:hover{transform:translateY(-2px)}button:active{transform:scale(.985)}button:disabled{opacity:.65;cursor:wait}.primary{background:linear-gradient(90deg,#5745e8,#6b55f5);color:#fff;box-shadow:0 10px 25px #6550f238;min-width:170px}.secondary{background:var(--soft);color:var(--blue);min-height:42px;padding:9px 16px;font-size:12px}.error{min-height:18px;margin-top:7px;font-size:12px;color:var(--danger)}.status{min-height:18px;text-align:center;margin-top:10px;font-size:12px;color:var(--muted)}.hidden{display:none!important}.check{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,#e5edfc,#eeeaff);color:#5d4ee7;font-size:25px;font-weight:900;margin-bottom:20px}.note{text-align:center;color:#8492a6;font-size:10px;line-height:1.5;margin:14px auto 0;max-width:600px}.finish-link{display:inline-flex;margin-top:24px;color:#fff;background:linear-gradient(90deg,#5745e8,#6b55f5);padding:13px 18px;border-radius:12px;text-decoration:none;font-size:13px;font-weight:800}
+@media(max-width:560px){.page{padding-left:14px;padding-right:14px;place-items:start center}.wrap{margin-top:4px}.brand{justify-content:flex-start;margin:2px 3px 14px;font-size:13px}.logo{width:36px;height:36px;border-radius:11px}.logo svg{width:23px}.brand-text small{font-size:7px}.card{border-radius:20px;padding:25px 19px;box-shadow:0 15px 42px rgba(31,95,184,.10)}h1{font-size:29px;line-height:1.1}h2{font-size:23px;line-height:1.23}p{font-size:14px;line-height:1.58}.kicker{font-size:9px;margin-bottom:12px}.progress{margin-bottom:24px}.name-field{margin-top:20px}textarea{min-height:132px;margin-top:20px}.actions{margin-top:17px}.primary{width:100%}.secondary{width:auto}.note{font-size:9.5px}}
+@media(max-width:360px){.card{padding:22px 16px}h1{font-size:26px}h2{font-size:21px}.brand{font-size:12px}}
+</style></head>
+<body><div class="page"><main class="wrap">
+<div class="brand"><div class="logo"><svg viewBox="0 0 32 32" fill="none"><path d="M7 9.5c3.7 0 6.7 1.3 9 4 2.3-2.7 5.3-4 9-4v13c-3.7 0-6.7 1.3-9 4-2.3-2.7-5.3-4-9-4v-13Z" stroke="white" stroke-width="2.4"/><path d="m11.5 15 3 3 6-6" stroke="white" stroke-width="2.4" stroke-linecap="round"/></svg></div><span class="brand-text">kaizen<small>LABORATÓRIOS EDUCACIONAIS</small></span></div>
+<section id="intro" class="card"><div class="kicker">Pesquisa • Docentes e Gestor Educacional</div><h1>A educação está mudando. Queremos ouvir quem ensina.</h1><p class="intro">6 perguntas rápidas para entender desafios, prioridades e o que realmente pode agregar valor ao trabalho docente e à experiência dos alunos.</p><input id="firstName" class="name-field" type="text" maxlength="40" autocomplete="given-name" placeholder="Seu primeiro nome"><div id="nameError" class="error"></div><div class="actions"><button class="primary" onclick="start()">Começar →</button></div></section>
+<section id="survey" class="card hidden"><div class="progress"><div class="meta"><span id="count"></span><span id="pct"></span></div><div class="track"><div id="fill" class="fill"></div></div></div><div class="kicker">Sua experiência importa</div><h2 id="question"></h2><textarea id="answer" maxlength="1200" placeholder="Escreva sua resposta..."></textarea><div id="error" class="error"></div><div class="actions"><button id="next" class="primary" onclick="next()">Continuar →</button></div><div class="actions" style="margin-top:9px"><button id="back" class="secondary" onclick="previous()">← Voltar</button></div><div id="submitStatus" class="status"></div></section>
+<section id="finish" class="card hidden"><div class="check">✓</div><div class="kicker">Pesquisa concluída</div><h2>Obrigado por compartilhar sua experiência.</h2><p>Suas respostas ajudam a Kaizen a desenvolver soluções mais conectadas às necessidades reais de professores e alunos.</p><a class="finish-link" href="https://conheca.pakaizenlab.com.br/">Conhecer a Kaizen →</a></section>
+<div class="note">Pesquisa Kaizen • respostas utilizadas para análise de necessidades e desenvolvimento de soluções educacionais.</div>
+</main></div>
 <script>
 const questions=[
 "Qual é hoje o maior desafio do seu trabalho como professor?",
@@ -180,77 +28,9 @@ const questions=[
 "Que ferramenta ou recurso faria diferença real no seu trabalho e na experiência dos seus alunos?",
 "Pensando no seu trabalho como um produto educacional independente: o que falta hoje para você oferecer uma experiência que faça seus alunos perceberem mais valor, se engajarem mais e escolherem continuar aprendendo com você?"
 ];
-let current=0;
-let firstName="";
-const answers=Array(questions.length).fill("");
-const $=id=>document.getElementById(id);
-function start(){
- firstName=$("firstName").value.trim().split(/\s+/)[0];
- if(!firstName){$("nameError").textContent="Informe seu primeiro nome para começar.";return}
- $("nameError").textContent="";
- $("intro").classList.add("hidden");$("survey").classList.remove("hidden");render();
-}
-function render(){
- const pct=Math.round((current+1)/questions.length*100);
- $("question").textContent=questions[current];
- $("answer").value=answers[current];
- $("count").textContent=`${current+1} de ${questions.length}`;
- $("pct").textContent=`${pct}%`;
- $("fill").style.width=`${pct}%`;
- $("back").style.visibility=current===0?"hidden":"visible";
- $("next").textContent=current===questions.length-1?"Concluir ✓":"Continuar →";
- $("error").textContent="";
-}
-async function next(){
- answers[current]=$("answer").value.trim();
- if(!answers[current]){$("error").textContent="Escreva uma resposta para continuar.";return}
- if(current<questions.length-1){current++;render();window.scrollTo({top:0,behavior:"smooth"});return}
-
- const nextBtn=$("next");
- const backBtn=$("back");
- nextBtn.disabled=true;
- backBtn.disabled=true;
- nextBtn.textContent="Enviando...";
- $("submitStatus").textContent="Salvando sua resposta com segurança.";
-
- const payload={
-   primeiro_nome:firstName,
-   resposta_1:answers[0],
-   resposta_2:answers[1],
-   resposta_3:answers[2],
-   resposta_4:answers[3],
-   resposta_5:answers[4],
-   resposta_6:answers[5]
- };
-
- try {
-   const response=await fetch("https://kgwfykaasfdaeaktjvid.supabase.co/rest/v1/teacher_research_responses",{
-     method:"POST",
-     headers:{
-       "Content-Type":"application/json",
-       "apikey":"sb_publishable_n8_63D1LkzBv9XYq59IqfA_ypEEbXny",
-       "Authorization":"Bearer sb_publishable_n8_63D1LkzBv9XYq59IqfA_ypEEbXny",
-       "Prefer":"return=minimal"
-     },
-     body:JSON.stringify(payload)
-   });
-   if(!response.ok) throw new Error(await response.text());
-   $("survey").classList.add("hidden");
-   $("finish").classList.remove("hidden");
-   window.scrollTo({top:0,behavior:"smooth"});
- } catch(error) {
-   console.error(error);
-   $("submitStatus").textContent="";
-   $("error").textContent="Não foi possível enviar agora. Verifique sua conexão e tente novamente.";
-   nextBtn.disabled=false;
-   backBtn.disabled=false;
-   nextBtn.textContent="Tentar novamente";
- }
-}
-function previous(){
- answers[current]=$("answer").value.trim();
- if(current>0){current--;render();window.scrollTo({top:0,behavior:"smooth"})}
-}
-</script>
-</body>
-</html>
+let current=0,firstName="";const answers=Array(questions.length).fill("");const $=id=>document.getElementById(id);
+function start(){firstName=$("firstName").value.trim().split(/\s+/)[0];if(!firstName){$("nameError").textContent="Informe seu primeiro nome para começar.";return}$("nameError").textContent="";$("intro").classList.add("hidden");$("survey").classList.remove("hidden");render()}
+function render(){const pct=Math.round((current+1)/questions.length*100);$("question").textContent=questions[current];$("answer").value=answers[current];$("count").textContent=`Pergunta ${current+1} de ${questions.length}`;$("pct").textContent=`${pct}%`;$("fill").style.width=`${pct}%`;$("back").style.visibility=current===0?"hidden":"visible";$("next").textContent=current===questions.length-1?"Concluir ✓":"Continuar →";$("error").textContent="";$("answer").focus()}
+async function next(){answers[current]=$("answer").value.trim();if(!answers[current]){$("error").textContent="Escreva uma resposta para continuar.";return}if(current<questions.length-1){current++;render();window.scrollTo({top:0,behavior:"smooth"});return}const nextBtn=$("next"),backBtn=$("back");nextBtn.disabled=true;backBtn.disabled=true;nextBtn.textContent="Enviando...";$("submitStatus").textContent="Salvando sua resposta com segurança.";const payload={primeiro_nome:firstName,resposta_1:answers[0],resposta_2:answers[1],resposta_3:answers[2],resposta_4:answers[3],resposta_5:answers[4],resposta_6:answers[5]};try{const response=await fetch("https://kgwfykaasfdaeaktjvid.supabase.co/rest/v1/teacher_research_responses",{method:"POST",headers:{"Content-Type":"application/json","apikey":"sb_publishable_n8_63D1LkzBv9XYq59IqfA_ypEEbXny","Authorization":"Bearer sb_publishable_n8_63D1LkzBv9XYq59IqfA_ypEEbXny","Prefer":"return=minimal"},body:JSON.stringify(payload)});if(!response.ok)throw new Error(await response.text());$("survey").classList.add("hidden");$("finish").classList.remove("hidden");window.scrollTo({top:0,behavior:"smooth"})}catch(error){console.error(error);$("submitStatus").textContent="";$("error").textContent="Não foi possível enviar agora. Verifique sua conexão e tente novamente.";nextBtn.disabled=false;backBtn.disabled=false;nextBtn.textContent="Tentar novamente"}}
+function previous(){answers[current]=$("answer").value.trim();if(current>0){current--;render();window.scrollTo({top:0,behavior:"smooth"})}}
+</script></body></html>
